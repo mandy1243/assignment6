@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- to get rid of favicon request in console -->
+  <link rel="shortcut icon" href="">
+
+  <!-- set viewport - for responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- P5  -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+  <!-- SOCKET.IO  -->
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  <script>
+  
+  	// SOCKET STUFF
+	var socket = io.connect();
+
+	socket.on('connect', function() {
+		console.log("Connected");
+	});
+
+  </script>
+
+  <style> 
+    body{
+      padding: 0; 
+      margin: 0;
+    }
+
+    h1{
+      padding: 0;
+      margin:0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> Use the up arrow, down arrow, left arrow,</h1>
+  <h1>and right arrow to control the brightness of the light.</h1>
+</body>
+</html>
+
+
+
